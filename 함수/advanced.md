@@ -23,7 +23,7 @@ hachiwareIntroduce(to: "치이카와", from: "하치와레")
 // == 치이카와 안녕 나는 하치와레야
 ```
 ### 가변 매개변수
-→ 전달 받을 값의 개수를 알기 어려울 때 사용
+→ 전달 받을 값의 개수를 알기 어려울 때 사용, 가변 매개변수는 함수 내에서 배열처럼 사용함
 ```swift
 func hachiware(points: Int...) -> Int {
     var total = 0
@@ -66,3 +66,16 @@ print("하치와레 간식 합 (result.sum), 전체 세트 (result.total)")
 2. 코드가 깔끔해짐 \
 ( 튜플을 안 쓰면 함수 2개 만들고 호출도 2번 해야함 )
 3. 이름 붙여서 읽기 쉬움
+
+---
+### ++ 내부 매개변수와 외부 매개변수
+함수의 매개변수는 내부 매개변수와 외부 매개변수를 가질 수 있음! \
+내부 매개변수는 말 그대로 함수의 내부에서 사용, 외부 매개변수는 함수 호출 시 사용 됨
+```SWIFT
+func hachiwareHello(friend: String, from place: String) -> String { // friend는 외부 = 내부 (같은이름), from는 외부 매개변수, 
+    return "(place)에서 온 (friend), 하치와레가 인사해"
+}
+
+print(hachiwareHello(friend: "치이카와", from: "우사기가시킨닭발"))
+// == 우사기가시킨닭발에서 온 치이카와, 하치와레가 인사해
+```
