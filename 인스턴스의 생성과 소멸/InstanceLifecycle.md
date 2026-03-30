@@ -78,14 +78,29 @@ print(dog2)       // nil
 > 디이니셜라이저는 '클래스'에서 정리한 적이 있어 간단하게만 설명하겠다!
 
 클래스의 인스턴스가 메모리에서 해제되는 시점에 호출, 인스턴스가 해제되는 시점에 해야할 일을 구현  자동으로 호출되므로 직접 호출할 수 없음 인스턴스가 메모리에서 해제되는 시점은 ARC(Automatic Reference Counting) 의 규칙에 따라 결정됨 디이니셜라이저는 클래스 타입에만 구현
+(+ 매개변수를 가질 수 없음)
 
-내
-이ㅣ
-ㄹ
-ㄹ
-ㄹ
-ㄹ
-ㄹ
-ㄹ
-ㄹ
-ㄹ
+-ARC : 클래스 인스턴스의 메모리 사용을 자동으로 관리하는 기능
+
+```swift
+class cuteeee {
+    var name: String
+
+    init(name: String) {
+        self.name = name
+        print("\(name) 생성")
+    }
+
+    deinit {
+        // 메모리에서 사라지기 직전에 호출됨
+        print("\(name) 소멸")
+    }
+}
+
+// 인스턴스 생성
+var user : cuteee? = cuteeee(name:"하치와레는귀엽다")
+
+// 인스턴스 소멸
+user : nil
+// == 하치와레는귀엽다 소멸
+```
