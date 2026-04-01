@@ -1,4 +1,4 @@
-# 익스텐션
+# 01 익스텐션
 스위프트에서 강력한 기능 중 하나 \
 구조체, 클래스, 열거형, 프로토콜 타입에 새로운 기능을 추가 할 수 있는 기능
 
@@ -20,6 +20,11 @@
 
 # 02 정의 문법
 `extension` 를 사용하여 정의
+```swift
+extension 타입이름 {
+    // 추가할 프로퍼티, 메서드, 이니셜라이저 등
+}
+```
 # 03 예제
 ### 연산 프로퍼티 추가
 ```swift
@@ -45,6 +50,37 @@ print(hachi.isHappy) // true
 ### 메서드 추가
 위 코드의 익스텐션을 통해 `Int`타입에 인스턴스 메서드인 `multiply(by:)` 메서드를 추가 \
 여러 기능을 여러 익스텐션 블록으로 나눠서 구현해도 전혀 문제가 ❌
+```swift
+struct Hachiware {
+    var food: String
+}
+
+extension Hachiware {
+    func eat() {
+        print("하치와레가 \(food)을 냠냠")
+    }
+}
+
+let hachiware = Hachiware(food: "팥붕보다맛있는슈붕")
+hachiware.eat()
+
+```
 
 ### 이니셜라이저 추가
 인스턴스를 초기화할 때 필요한 다양한 데이터를 전달 받을 수 있도록 여러 종류의 이니셜라이저를 만들 수 있음
+```swift
+struct Hachiware {
+    var name: String
+    var age: Int
+}
+
+extension Hachiware {
+    init() {
+        self.name = "하치와레"
+        self.age = 100
+    }
+}
+
+let hachiware = Hachiware()
+print("\(hachiware.name), \(hachiware.age)살")
+```s
