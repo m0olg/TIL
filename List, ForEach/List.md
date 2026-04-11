@@ -26,3 +26,5 @@ List(0..<17) { index in
 - RandomAccessCollention 프로토콜을 준수하는 데이터를 집어넣을 수도 있는데 이 경우 각 요소들을 식별할수 있도록 id 값을 제공해야함
 
 # 02 `List()` 안에 id 값을 넣어주기
+- id 매개변수는 Hashable 프로토콜을 준수하는 프로퍼티를 지정 가능 \
+swift 기본 타입들은 대부분 Hashable 하므로 self로 지정하는게 일반적
