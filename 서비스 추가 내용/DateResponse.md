@@ -1,4 +1,4 @@
-### (Daate Response)
+### (Date Response)
 
 # 01 Date란?
 → 실제 서버가 보낸 데이터
