@@ -245,5 +245,3 @@ URLSession.shared.dataTsak(with: request) { data, response, error in
 - `URLResponse` (부모) : 그냥 일반적인 모든 통신 응답 (기능은 별로 없음)
 - `HTTPURLResponse` (자식) : 웹과 앱에서 쓰는 HTTP 통신 전용 응답 (상태 코드, 헤더 등 핵심 기능 많음)
 - 실무에선 서버가 잘 응답했는지 검사해야 하므로 `as?, HTTPURLResponse`로 타입을 구제화 (배웠던 다운 캐스팅을 사용)해서 `statusCode`를 꺼내 쓰는 것이 필수 !!!!!!!
-message.txt
-11KB
