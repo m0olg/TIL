@@ -1,4 +1,4 @@
-# 01 Type Castion이란?
+# 01 Type Casting이란?
 → 타입 캐스팅은 인스턴스의 **타입**을 확인하거나 해당 인스턴스를 슈퍼 클래스나 하위 클래스로 취급하는 방법 <br><br>
 
 # 02 `is` : Checking Type
