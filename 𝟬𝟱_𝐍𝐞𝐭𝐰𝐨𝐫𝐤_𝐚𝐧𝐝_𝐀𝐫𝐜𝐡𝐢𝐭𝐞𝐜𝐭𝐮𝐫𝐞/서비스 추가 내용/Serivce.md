@@ -167,5 +167,3 @@ return dto.map {
 | **StorageService**<br>(저장소 서비스) | • 인터넷이 안 돼도 글을 볼 수 있게 `SwiftData`나 `CoreData`에 저장하기<br>• 다크모드 설정 같은 간단한 설정을 `UserDefaults`에 저장하기 |
 | **AnalyticsService**<br>(통계 서비스) | • 사용자가 '구매하기' 버튼을 몇 번 눌렀는지 Firebase 등에 기록 보내기<br>• 앱이 어디서 튕겼는지(크래시 로그) 수집하기 |
 | **NotificationService**<br>(알림 서비스) | • "새로운 댓글이 달렸어요!" 같은 푸시 알림 권한 요청하기<br>• 알림을 탭하고 들어왔을 때 특정 화면으로 바로 이동시켜주기 |
-message.txt
-12KB
