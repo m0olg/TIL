@@ -65,6 +65,34 @@ store1 === store2 // true
 단순히 여러 곳에서 사용하고 싶다는 이유로 싱글톤을 사용해서는 안 되고 정말 **인스턴스가 하나만 존재해야하는지 판단 먼저** 해야함
 
 # 05 싱글톤과 의존성 주입
+싱글톤은 클래스 내부에서 객체를 **직접** 가져옴
+```swift
+// 로그인 화면이 네트워크 관리자 객체를 직접 가져와 사용하는 방식
+final class LoginViewModel {
+    func login() {
+        NetworkManager.shared.requset() // 요청
+    }
+}
+```
+* 이 방식은 사용하기 쉽지만 `LoginViewModel`이 `NetworkManager`에 강하게 의존하게 됨
+
+
+반면 의존성 주입은 필요한 객체를 외부에서 전달 받음
+```swift
+// 테스트 할 때 실제 네트워크 관리자 대신 까짜 네트워크 객체를 전달할 수 있음
+final class LoginViewModel {
+    private let networkManager: NetworkManager
+
+    init(networkManager: NetworkManager) {
+        self.networkManager = networkManager
+    }
+
+    func login() {
+        networkManager.request()
+    }
+}
+```
+
 
 # 06 정리
 * 싱글톤 패턴은 하나의 인스턴스만 생성하고 여러 곳에서 공유하는 디자인 패턴
