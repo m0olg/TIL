@@ -53,7 +53,7 @@ final class UserViewModel {
 
 # 04 Request와 Response (요청과 응답)
 이 두개는 서비스에서 자주 사용되는 개념임
-> 클라이언트 ━━ Request(요청) ➡ 서버
+> 클라이언트 ━━ Request(요청) ➡ 서버 \
 > 클라이언트 ⬅ Response(응답) ━━ 서버
 * `Request` : 클라이언트가 서버에 보내는 요청
 * `Response` : 서버가 클라이언트에 보내는 응답
