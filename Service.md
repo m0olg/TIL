@@ -315,3 +315,29 @@ let viewModel = UserViewModel(
 # 11 정리
 `Service`는 <mark>특정 기능을 담당하는 객체</mark> \
 특히 서버 통신을 `Service`로 분리하면 **화면 코드가 간결**해지고 각 객체의 **역할이 명확**해짐
+
+#### 🍎 핵심 역할
+* `Request` 생성
+* 서버 통신
+* `Response` 처리
+* JSON 디코딩
+* 성공과 실패 결과 전달
+
+#### 🐰 핵심 흐름
+```
+ViewController
+→ ViewModel
+→ Service
+→ Server
+→ Service
+→ ViewModel
+→ ViewController
+```
+
+#### 🍀 기억할 점
+* `Request`는 서버에 보내는 **요청**
+* `Response`는 서버에서 받는 **응답**
+* `Service`는 네트워크나 데이터 처리 로직을 담당
+* `ViewModel`은 `Service`를 호출하고 화면에 필요한 상태를 관리
+* `Protocol`과 **의존성 주입**을 사용하면 테스트하기 쉬워짐
+* `Service`를 항상 `Singleton`으로 만들 필요는 없음
