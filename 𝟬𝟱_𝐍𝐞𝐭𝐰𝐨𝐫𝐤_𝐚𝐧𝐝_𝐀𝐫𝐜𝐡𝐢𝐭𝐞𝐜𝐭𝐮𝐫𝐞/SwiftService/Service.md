@@ -145,7 +145,7 @@ struct User: Decodable {
 # 06 코드 흐름
 ### ① 일단 그림으로 보기
 
-![alt text](서비스그림2.png)
+<img src="서비스그림2.png" width="350">
 
 ### ② 실행 순서
 1. `ViewModel`이 `UserService`에 사용자 정보를 요청
